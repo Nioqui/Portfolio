@@ -1,8 +1,0 @@
- <a href="#">
-            <span>
-                {props.svg}
-            </span>
-            <p>
-                {props.name}
-            </p>
-        </a>
