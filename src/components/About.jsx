@@ -4,8 +4,7 @@ import about from '../assets/images/about.png';
 
 const AboutSection = styled.section`
     width: 100%;
-    height: 50vh;
-    background-color: #474747;
+    height: 42vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +23,10 @@ const AboutSection = styled.section`
     .text{
       width: 60%;
       margin: 10px;
+    }
+
+    p , span, h2{
+      color:#f1f1f1;
     }
 `
 
