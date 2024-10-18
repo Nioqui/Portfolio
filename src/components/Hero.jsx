@@ -1,80 +1,83 @@
 import React from 'react'
 import styled from 'styled-components'
-import Gitlogo from '../assets/gitLogo'
-import LinkedinLogo from '../assets/LinkedinLogo'
 
 const HeroContent = styled.div`
+    height: 90vh;
+    color: #f1f1f1;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
 
     main{
-        width: 55%;
-        flex-direction: column;
-        margin: auto;
+      width: 55%;
+      text-align: center;
+    }
+
+    main div h1{
+      font-size: 90px;
+    }
+
+    main div span, main div span{
+      color: #01E3C5;
     }
     
-    p, h1{
-        color: #f1f1f1;
+    main div p{
+      margin: 0;
+      font-size: 30px;
     }
 
-    p{
-        font-size: 32px;
+    main div h1{
+      margin: 0;
     }
 
-    .pill-container{
+    .projects-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .projects{
         display: flex;
-        flex-direction: row;
-        gap:0.8em;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(26, 25, 25, 0.6);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid #747373;
+        border-radius: 10px;
+        width: 220px;
+        height: 60px;
+        margin: 20px;
+    }
+
+    a{
+        text-decoration: none;
+        color: #f1f1f1;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .projects:hover{
+      background:  #01E3C5;
+      font-weight: bolder;
+      color: white;
     }
 `
-
-const Pill = styled.div`
-  a{
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    background-color: #f1f1f1;
-    width: auto;
-    padding: 0px 4px 0px 4px;
-    height: 40px;
-    border-radius: 11px;
-    text-decoration: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
-  }
-
-  p{
-    margin: 0;
-    font-size: 16px;
-    color: #0A0A0A;
-  }
-`
-
-function Smpills({ logo: Logo, name }) {
-  return (
-    <Pill>
-      <a href="#">
-        <Logo />
-        <p>{name}</p>
-      </a>
-    </Pill>
-  );
-}
-
-
 
 function Hero() {
   return (
     <HeroContent>
         <main>
             <div className='top-hero'>
-                <h1>Hey, i'm Nicolás</h1>
-            </div>    
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae perspiciatis nesciunt numquam cumque facere, vero commodi iure modi eius neque laudantium vitae</p>
-            <div className="pill-container">
-                <Smpills logo={Gitlogo} name="github"/>
-                <Smpills logo={LinkedinLogo} name="Linkedin"/>
+                <h1>Transforming your ideas into <span>IT Solutions</span></h1>
+                <p> Hey, It's Nicolás a <span>Fullstack developer</span> based in <span>Argentina</span></p>
+            </div>
+            <div className='projects-container'>
+              <div className='projects'>
+                <a href="#">See my projects <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="23px" height="23px" fill="#f1f1f1"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg> </a>
+              </div>
             </div>
         </main>
     </HeroContent>

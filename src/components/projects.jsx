@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import iptracker from '../assets/images/iptracker.jpg'; 
-import ReactLogo from '../assets/ReactLogo';
+import agecalculator from '../assets/images/agecalculator.jpg'
+import WhiteGitlogo from '../assets/WhiteGitLogo ';
+import EyeLogo from '../assets/eye-regular';
 
 const ProjectBox = styled.div`
     width: 60%;
@@ -17,53 +19,79 @@ const ProjectBox = styled.div`
     p{
         color: #f1f1f1;
     }
+
+    .title{
+        font-size: 36px;
+    }
 `
 const ProjectCardStyles = styled.div`
     display: flex;
-    gap: 1em;
-    
+    margin: 20px;
+    gap: 1.4em;
+
+
     img{
-        width: 530px;
-        border-radius: 15px;
+        width: 500px;
+        border-radius: 10px;
     }
 
-    div{
-        display: flex;
-        flex-direction: column;
+    div .titlestyles{
+        font-size: 32px;
+        font-weight: bolder;
+
     }
 
-    .logodiv{
+    div .resumen{
+        font-size: 24px;
+    }
+
+    div .GitSection, div .PreviewSection{
         display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: center;
-        background-color: #f1f1f1;
-        width: 80px;
-        height: 30px;
-        border-radius: 7px;
+        width: 110px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: #686767;
+        gap: 0.4em;
+        text-decoration: none;
     }
 
-    .logodiv p{
-        color: #000000;
+    div .GitSection{
+        width: 70px;
     }
 
-    .titlestyles{
-        font-size: 40px;
-        font-weight: bolder;
+    div .GitSection  p, div .PreviewSection p{
+        color: #f1f1f1;
     }
+
+    .buttonDiv{
+        height: 140px;
+        display: flex;
+        width: 190px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 `
 
-function ProjectCard({ image, title, logo: Logo, texto }) {
+function ProjectCard({ image, title, Git , Preview, texto, logo: Logo, PreviewLogo: PreviewLogo }) {
     return (
     <ProjectCardStyles>
             <img src={image}/>
             <div>
-                <p className='titlestyles'>{title}</p>
-                <div className='logodiv'>
-                    <Logo />
-                    <p>react</p>
-                </div>
+            <p className='titlestyles'>{title}</p>
                 <p className='resumen'>{texto}</p>
+                <div className='buttonDiv'>
+                    <a  href={Git} className='GitSection'>
+                        <Logo />
+                        <p>Git</p>
+                    </a>
+                    <a href={Preview} className='PreviewSection'>
+                        <PreviewLogo />
+                        <p>Preview</p>
+                    </a>
+                </div>
             </div>
     </ProjectCardStyles>
     )
@@ -74,16 +102,29 @@ function Projects() {
     <ProjectBox>
         <div className='ProjectTitle'>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="34px" height="34px" fill="#f1f1f1"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg>
-            <p>Proyectos</p>
+            <p className='title'>Proyectos</p>
         </div>
         <ProjectCard
         
             image={iptracker}
             title="Frontend Mentor - IP/Domain Tracker"
-            logo={ReactLogo}
-            texto="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
-
+            texto="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic tempora quia, iusto id labore, quibusdam."
+            Git="https://github.com/Nioqui/ip-address-tracker-master"
+            Preview="#"
+            logo={WhiteGitlogo}
+            PreviewLogo={EyeLogo}
         />
+            <ProjectCard
+        
+            image={agecalculator}
+            title="Frontend Mentor - Age calculator"
+            texto="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic tempora quia, iusto id labore, quibusdam."
+            Git="https://github.com/Nioqui/AgeCalculator"
+            Preview="#"
+            logo={WhiteGitlogo}
+            PreviewLogo={EyeLogo}
+        />
+        
     </ProjectBox>  
   )
 }

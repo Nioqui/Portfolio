@@ -2,19 +2,39 @@ import React from 'react'
 import styled from 'styled-components';
 
 
+window.addEventListener('scroll', function() {
+  let header = document.getElementById('header');
+  if (window.scrollY > 100) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+
 const NavBar = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: center;
 
   container{
-    width: 60%;
+    position: absolute;
+    top: 0;
     height: 90px;
+    width: 30%;
+    margin-top: 15px;
+    border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    justify-self: center;
+  }
 
+  container.scrolled {
+    position: fixed;
+    background-color: rgba(26, 25, 25, 0.6);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #747373;
   }
 
  a{
@@ -25,23 +45,15 @@ const NavBar = styled.nav`
   }
 
   a:hover{
-    opacity: 0.4;
-    transition: opacity 0.2s ease 0s;
-  }
-
-  svg:hover{
-    opacity: 0.4;
-    transition: opacity 0.2s ease 0s;
+    color:  #01E3C5;
+    transition: color 0.5s ease 0s;
   }
   `
 
 function Header() {
   return (
     <NavBar>
-      <container>
-        <div className='logo'>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="34px" height="34px" fill="#f1f1f1"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg>
-        </div>
+      <container id="header">
         <nav>
             <a href="#" className='text'>home</a>
             <a href="#" className='text'>about me</a>
