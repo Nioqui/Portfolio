@@ -20,7 +20,7 @@ const NavBar = styled.nav`
   container{
     position: absolute;
     top: 0;
-    height: 90px;
+    height: 70px;
     width: 30%;
     margin-top: 15px;
     border-radius: 10px;

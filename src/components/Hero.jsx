@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeroContent = styled.div`
-    height: 90vh;
+    height: 95vh;
     color: #f1f1f1;
     display: flex;
     align-items: center;
@@ -72,7 +72,7 @@ function Hero() {
         <main>
             <div className='top-hero'>
                 <h1>Transforming your ideas into <span>IT Solutions</span></h1>
-                <p> Hey, It's Nicolás a <span>Fullstack developer</span> based in <span>Argentina</span></p>
+                <p> Hey! I'm Nicolás, a <span>Fullstack developer</span> based in <span>Argentina</span></p>
             </div>
             <div className='projects-container'>
               <div className='projects'>
