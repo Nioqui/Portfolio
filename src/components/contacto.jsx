@@ -48,7 +48,7 @@ const ContactStyles = styled.div`
     }
 
     .button a:hover{
-        background:  #01E3C5;
+        background:  rgb(1, 227, 197);
         font-weight: bolder;
         color: white;
     }
