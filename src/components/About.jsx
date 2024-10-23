@@ -73,6 +73,7 @@ const AboutSection = styled.div`
   }
 
   @media (max-width:1024px){
+
   .container {
     width: 89%;
   }
@@ -97,33 +98,42 @@ const AboutSection = styled.div`
   }
 
   @media (max-width:425px){
-    
+
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width:375px){
   .container {
     width: 98%;
   }
+
   #about-title {
-    font-size: 20px;
+    font-size: 35px;
   }
   .container .upperside p {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .container .upperside .text-span{
-    font-size: 12px;
+    font-size: 18px;
   }
 
   #education-title, #tech-title {
-    font-size: 16px;
+    font-size: 20px;
+  }
+
+  .container .belowside .techs svg{
+    width: 30px;
+    height: 30px;
   }
 
   .container .belowside .education ul li{
     font-size: 10px;
   }
+}
 
-  .container .belowside .techs svg{
-    width: 24px;
-  }
-  }
 `
 
 function About() {

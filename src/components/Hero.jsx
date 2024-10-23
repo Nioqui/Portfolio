@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeroContent = styled.div`
-    height: 95vh;
+    height: 100vh;
     color: #f1f1f1;
     display: flex;
     align-items: center;
@@ -104,31 +104,57 @@ const HeroContent = styled.div`
 
 
         main div h1{
-        font-size: 50px
+        font-size: 60px
       }
 
         main div p{
         margin: 0;
-        font-size: 17px;
+        font-size: 22px;
       }
     }
 
     @media (max-width:425px){
-      height: 80vh;
 
       main{
         width: 100%;
       }
 
-        main div h1{
-        font-size: 30px;
+      main div h1{
+        font-size: 60px;
       }
 
       main div p{
       margin: 0;
-      font-size: 13px;
+      font-size: 16px;
     }
     }
+
+    @media (max-width:375px){
+      main div h1{
+        font-size: 55px;
+      }
+      main div p{
+      font-size: 15px;
+    }
+
+    .projects{
+      width: 190px;
+    }
+    }
+
+    @media (max-width:320px){
+      main div h1{
+        font-size: 45px;
+      }
+      main div p{
+      font-size: 14px;
+    }
+
+    .projects{
+      width: 185px;
+    }
+    }
+
 `
 
 function Hero() {
