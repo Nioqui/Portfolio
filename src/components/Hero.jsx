@@ -13,6 +13,10 @@ const HeroContent = styled.div`
       text-align: center;
     }
 
+    .top-hero{
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+    }
     main div h1{
       font-size: 90px;
     }
@@ -47,6 +51,8 @@ const HeroContent = styled.div`
         width: 220px;
         height: 60px;
         margin: 20px;
+        opacity: 0;
+        animation: fadeInUp 1s ease-out forwards;
     }
 
     a{
@@ -57,6 +63,7 @@ const HeroContent = styled.div`
         align-items: center;
         justify-content: center;
         gap: 5px;
+        
     }
 
     .projects:hover{
@@ -64,19 +71,77 @@ const HeroContent = styled.div`
       font-weight: bolder;
       color: white;
     }
+
+    @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Comienza desplazado hacia abajo */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Se mueve hacia su posición original */
+      }
+}
+
+    @media (max-width: 1180px){
+        main div h1{
+        font-size: 70px;
+      }
+    }
+
+    @media (max-width:800px){
+        main div h1{
+        font-size: 50px;
+      }
+    }
+
+    
+    @media (max-width:800px){
+        main{
+        width: 90%;
+        text-align: center;
+      }
+
+
+        main div h1{
+        font-size: 50px
+      }
+
+        main div p{
+        margin: 0;
+        font-size: 17px;
+      }
+    }
+
+    @media (max-width:425px){
+      height: 80vh;
+
+      main{
+        width: 100%;
+      }
+
+        main div h1{
+        font-size: 30px;
+      }
+
+      main div p{
+      margin: 0;
+      font-size: 13px;
+    }
+    }
 `
 
 function Hero() {
   return (
     <HeroContent>
         <main>
-            <div className='top-hero'>
+            <div className='top-hero' id='Hero'>
                 <h1>Transforming your ideas into <span>IT Solutions</span></h1>
                 <p> Hey! I'm Nicolás, a <span>Fullstack developer</span> based in <span>Argentina</span></p>
             </div>
             <div className='projects-container'>
               <div className='projects'>
-                <a href="#">See my projects <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="23px" height="23px" fill="#f1f1f1"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg> </a>
+                <a href="#Projects">See my projects <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="23px" height="23px" fill="#f1f1f1"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg> </a>
               </div>
             </div>
         </main>

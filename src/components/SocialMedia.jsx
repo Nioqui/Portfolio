@@ -35,7 +35,11 @@ const StyledLogo = styled.div`
   path {
       fill: inherit;
     }
-`;
+
+    @media (max-width:600px){
+      display: none;
+    }
+`
 
 function SocialMedia() {
   return (

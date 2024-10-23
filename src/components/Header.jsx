@@ -30,6 +30,7 @@ const NavBar = styled.nav`
   }
 
   container.scrolled {
+    z-index: 1000;
     position: fixed;
     background-color: rgba(26, 25, 25, 0.6);
     backdrop-filter: blur(4px);
@@ -48,17 +49,33 @@ const NavBar = styled.nav`
     color:  #01E3C5;
     transition: color 0.5s ease 0s;
   }
-  `
+
+  @media (max-width: 1400px){
+    container{
+      width: 55%;
+    }
+  }
+    @media (max-width: 768px){
+      container{
+      width: 90%;
+    }
+  }
+    @media (max-width: 600px){
+      container{
+        display: none;
+    }
+  }
+`
 
 function Header() {
   return (
     <NavBar>
       <container id="header">
         <nav>
-            <a href="#" className='text'>home</a>
-            <a href="#" className='text'>about me</a>
-            <a href="#" className='text'>projects</a>
-            <a href="#" className='text'>contact</a>
+            <a href="#Hero" className='text'>home</a>
+            <a href="#About" className='text'>about me</a>
+            <a href="#Projects" className='text'>projects</a>
+            <a href="#Contact" className='text'>contact</a>
         </nav>
         </container>
     </NavBar>
