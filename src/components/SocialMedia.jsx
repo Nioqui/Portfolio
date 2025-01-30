@@ -36,7 +36,7 @@ const StyledLogo = styled.div`
       fill: inherit;
     }
 
-    @media (max-width:600px){
+    @media (max-width:768px){
       display: none;
     }
 `

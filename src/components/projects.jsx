@@ -54,6 +54,7 @@ const ProjectBox = styled.div`
 
     @media (max-width:425px){
         width: 98%;
+        margin-top: 70px;
         
         .ProjectTitle{
         width: 98%;
@@ -74,7 +75,7 @@ const ProjectCardStyles = styled.div`
     }
 
     div img{
-        width: 50%;
+        width: 100%;
         border-radius: 10px;
         box-shadow: -5px 9px 20px -5px rgba(35, 34, 34, 0.5);
     }
@@ -103,7 +104,6 @@ const ProjectCardStyles = styled.div`
 
     #hover-effect img{
         width: 100%;
-        height: auto;
         transition: transform 0.5s ease;
         box-shadow: -8px 9px 16px -7px rgba(0,0,0,0.75);
     }
@@ -195,20 +195,6 @@ const ProjectCardStyles = styled.div`
     }
 
     @media (max-width:768px){
-
-        div .titlestyles{
-        font-size: 18px;
-        }
-        #resumen{
-            font-size: 13px;
-        }
-        .tech-tag{
-            font-size: 10px;
-        }
-
-    }
-
-    @media (max-width:425px){
         .container{
             display: flex;
             flex-direction: column;
@@ -272,7 +258,7 @@ function ProjectCard({ image, title, Git , Preview, texto, logo: Logo, PreviewLo
                         <Logo />
                         <p>Git</p>
                     </a>
-                    <a href={Preview}>
+                    <a href={Preview} target='blank'>
                         <PreviewLogo />
                         <p>Preview</p>
                     </a>
@@ -309,7 +295,7 @@ function Projects() {
                 title="Frontend Mentor - IP/Domain Tracker"
                 texto="This tool allows you to get the user’s IP and locate the associated servers using the Google Places API. It's ideal for analyzing web traffic and enhancing security without compromising user privacy."
                 Git="https://github.com/Nioqui/ip-address-tracker-master"
-                Preview="#"
+                Preview="https://iptrackertry.netlify.app"
                 logo={WhiteGitlogo}
                 PreviewLogo={EyeLogo}
                 technologies={'JAVASCRIPT '+'HTML '+'CSS '+'API'}
@@ -319,7 +305,7 @@ function Projects() {
                 title="Frontend Mentor - Age calculator"
                 texto="This tool calculates the user's age by entering their birth date (day, month, and year). Simply provide the details and get your exact age quickly and easily."
                 Git="https://github.com/Nioqui/AgeCalculator"
-                Preview="#"
+                Preview="https://agecalculatordev.netlify.app"
                 logo={WhiteGitlogo}
                 PreviewLogo={EyeLogo}
                 technologies={'JAVASCRIPT '+'HTML '+'CSS'}

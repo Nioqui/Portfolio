@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import React from 'react'
-import Arrowu from '../assets/arrow-up'
 import Arrowup from "../assets/arrow-up";
 
 const ContactStyles = styled.div`
@@ -53,15 +52,27 @@ const ContactStyles = styled.div`
         color: white;
     }
 
+    @media (max-width:950px){
+        .container h1{
+                font-size: 50px;
+        }
+    }
+
     @media (max-width:768px){
         .container{
-        width: 89%;
+            width: 89%;
+    }
     }
     
+    @media (max-width:660px){
+        .container  h1{
+        font-size: 50px;
+    }
+    }
+
     @media (max-width:425px){
         .container  h1{
         font-size: 30px;
-    }
     }
     }
 

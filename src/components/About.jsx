@@ -97,10 +97,44 @@ const AboutSection = styled.div`
   }
   }
 
+  @media (max-width:600px){
+    .container .belowside .techs svg{
+    width: 30px;
+    height: 30px;
+  }
+  .container .belowside .education ul li{
+    font-size: 15px;
+  }
+   
+}
+
   @media (max-width:425px){
 
   .container {
     width: 95%;
+  }
+  #about-title {
+    font-size: 23px;
+  }
+  .container .upperside p {
+    font-size: 13px;
+  }
+
+  .container .upperside .text-span{
+    font-size: 13px;
+  }
+
+  #education-title, #tech-title {
+    font-size: 18px;
+  }
+
+  .container .belowside .techs svg{
+    width: 30px;
+    height: 30px;
+  }
+
+  .container .belowside .education ul li{
+    font-size: 10px;
   }
 }
 
@@ -110,23 +144,23 @@ const AboutSection = styled.div`
   }
 
   #about-title {
-    font-size: 35px;
+    font-size: 30px;
   }
   .container .upperside p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .container .upperside .text-span{
-    font-size: 18px;
+    font-size: 16px;
   }
 
   #education-title, #tech-title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .container .belowside .techs svg{
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
   }
 
   .container .belowside .education ul li{
